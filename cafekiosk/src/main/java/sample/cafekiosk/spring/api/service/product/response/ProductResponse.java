@@ -1,18 +1,20 @@
 package sample.cafekiosk.spring.api.service.product.response;
 
 import lombok.Builder;
+import lombok.Getter;
 import sample.cafekiosk.spring.domain.product.Product;
 import sample.cafekiosk.spring.domain.product.ProductSellingStatus;
 import sample.cafekiosk.spring.domain.product.ProductType;
 
+@Getter
 public class ProductResponse {
 
-    private final Long id;
-    private final String productNumber;
-    private final ProductType type;
-    private final ProductSellingStatus sellingStatus;
-    private final String name;
-    private final int price;
+    private Long id;
+    private String productNumber;
+    private ProductType type;
+    private ProductSellingStatus sellingStatus;
+    private String name;
+    private int price;
 
     @Builder
     private ProductResponse(final Long id, final String productNumber, final ProductType type,
